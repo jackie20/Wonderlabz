@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Withdraw</title>
+</head>
+<body>
+<h1>Withdraw</h1>
+<form method="post" th:action="@{/api/accounts/{accountNumber}/withdraw(accountNumber=${account.accountNumber})}">
+  Amount: <input type="text" name="amount" required/><br/>
+  <input type="submit" value="Withdraw"/>
+</form>
+</body>
+</html>

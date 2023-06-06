@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Deposit</title>
+</head>
+<body>
+<h1>Deposit</h1>
+<form method="post" th:action="@{/api/accounts/{accountNumber}/deposit(accountNumber=${account.accountNumber})}">
+  Amount: <input type="text" name="amount" required/><br/>
+  <input type="submit" value="Deposit"/>
+</form>
+</body>
+</html>

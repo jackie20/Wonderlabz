@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Savings Account</title>
+</head>
+<body>
+<h1>Create Savings Account</h1>
+<form method="post" th:action="@{/api/accounts/savings}">
+    Account Number: <input type="text" name="accountNumber" required/><br/>
+    Account Holder Name: <input type="text" name="accountHolderName" required/><br/>
+    <input type="submit" value="Create Account"/>
+</form>
+</body>
+</html>

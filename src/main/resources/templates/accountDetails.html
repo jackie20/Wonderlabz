@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Account Details</title>
+</head>
+<body>
+<h1>Account Details</h1>
+<table>
+  <tr>
+    <th>Account Number:</th>
+    <td th:text="${account.accountNumber}"></td>
+  </tr>
+  <tr>
+    <th>Account Holder Name:</th>
+    <td th:text="${account.accountHolderName}"></td>
+  </tr>
+  <tr>
+    <th>Balance:</th>
+    <td th:text="${account.balance}"></td>
+  </tr>
+</table>
+<br/>
+<a th:href="@{/accounts/${account.accountNumber}/deposit}">Deposit</a>
+<a th:href="@{/accounts/${account.accountNumber}/withdraw}">Withdraw</a>
+<a th:href="@{/accounts/${account.accountNumber}/transactions}">Transaction History</a>
+</body>
+</html>
